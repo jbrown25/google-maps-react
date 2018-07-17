@@ -136,7 +136,7 @@ export class Map extends React.Component {
 
       const mapTypeIds = this.props.google.maps.MapTypeId || {};
       const mapTypeFromProps = String(this.props.mapType).toUpperCase();
-      const mapTypeId = mapTypeIds[mapTypeFromProps]
+      let mapTypeId = mapTypeIds[mapTypeFromProps]
       const mapTypeControlOptions = {
         mapTypeIds: Object.keys(mapTypeIds).map(function (key) {
           return mapTypeIds[key];
